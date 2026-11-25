@@ -7,15 +7,15 @@
 <meta name="description" content="Harmonização facial natural em Barueri com a Dra. Jéssica Amaral (CREFITO 319827-F). Análise facial por fotografia, planejamento por proporções, bioestimuladores e tratamentos de pele no Instituto Faciere. Agende pelo WhatsApp.">
 <!-- ESBOÇO: tirar o noindex quando o site for publicado de verdade -->
 <meta name="robots" content="noindex, nofollow">
-<!-- [A DEFINIR] trocar pelo domínio final -->
-<link rel="canonical" href="https://www.drajessicaamaral.com.br/">
+<!-- domínio atual da clínica (o site antigo está nele) -->
+<link rel="canonical" href="https://clinicadrajessicaamaral.com.br/">
 <meta name="theme-color" content="#E7E3DE">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:title" content="Dra. Jéssica Amaral · Harmonização Facial em Barueri">
 <meta property="og:description" content="Harmonização começa pela pele. Análise facial, planejamento e resultado natural no Instituto Faciere, em Barueri.">
-<meta property="og:image" content="https://www.drajessicaamaral.com.br/jessica-amaral.webp">
-<meta property="og:url" content="https://www.drajessicaamaral.com.br/">
+<meta property="og:image" content="https://clinicadrajessicaamaral.com.br/jessica-amaral.webp">
+<meta property="og:url" content="https://clinicadrajessicaamaral.com.br/">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,24 +27,25 @@
   "@graph": [
     {
       "@type": ["HealthAndBeautyBusiness", "MedicalClinic"],
-      "@id": "https://www.drajessicaamaral.com.br/#clinica",
+      "@id": "https://clinicadrajessicaamaral.com.br/#clinica",
       "name": "Instituto Faciere · Dra. Jéssica Amaral",
       "description": "Harmonização facial, bioestimuladores e tratamentos de pele em Barueri (SP).",
-      "url": "https://www.drajessicaamaral.com.br/",
-      "image": "https://www.drajessicaamaral.com.br/recepcao-faciere.webp",
+      "url": "https://clinicadrajessicaamaral.com.br/",
+      "image": "https://clinicadrajessicaamaral.com.br/recepcao-faciere.webp",
       "telephone": "+55-11-4552-4825",
-      "address": {"@type": "PostalAddress", "streetAddress": "Rua Campos Sales, 303, sala 23", "addressLocality": "Barueri", "addressRegion": "SP", "addressCountry": "BR"},
+      "address": {"@type": "PostalAddress", "streetAddress": "Rua Campos Sales, 303, sala 23, Vila São João", "postalCode": "06401-000", "addressLocality": "Barueri", "addressRegion": "SP", "addressCountry": "BR"},
       "areaServed": ["Barueri", "Alphaville", "Santana de Parnaíba", "Carapicuíba", "Osasco"],
       "sameAs": ["https://www.instagram.com/drajessicamaral/", "https://www.instagram.com/faciereclinic/"],
-      "founder": {"@id": "https://www.drajessicaamaral.com.br/#jessica"}
+      "aggregateRating": {"@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "366", "bestRating": "5"},
+      "founder": {"@id": "https://clinicadrajessicaamaral.com.br/#jessica"}
     },
     {
       "@type": "Person",
-      "@id": "https://www.drajessicaamaral.com.br/#jessica",
+      "@id": "https://clinicadrajessicaamaral.com.br/#jessica",
       "name": "Jéssica Amaral",
       "jobTitle": "Fisioterapeuta, especialista em harmonização facial",
       "identifier": "CREFITO 319827-F",
-      "worksFor": {"@id": "https://www.drajessicaamaral.com.br/#clinica"},
+      "worksFor": {"@id": "https://clinicadrajessicaamaral.com.br/#clinica"},
       "sameAs": ["https://www.instagram.com/drajessicamaral/"]
     }
   ]
@@ -346,6 +347,25 @@ section{position:relative}
 .modal p{margin-bottom:10px}
 
 
+
+/* ---------- Avaliações no Google ---------- */
+.reviews{padding-top:0;padding-bottom:var(--gap)}
+.rev-head{display:flex;justify-content:space-between;align-items:end;gap:24px 40px;flex-wrap:wrap;margin-bottom:clamp(32px,4vw,56px)}
+.rev-head h2{max-width:14ch}
+.rev-actions{display:flex;align-items:center;gap:24px;flex-wrap:wrap}
+.rev-actions .u{color:var(--ink)}
+.rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(14px,1.6vw,24px)}
+.rev{margin:0;background:var(--surface);border-radius:var(--r);padding:clamp(22px,2.4vw,34px);display:flex;flex-direction:column;gap:16px;transition:transform .4s var(--ease),background-color .3s}
+.rev:hover{transform:translateY(-6px);background:var(--surface-2)}
+.rev p{font-size:clamp(1.1rem,1rem + .4vw,1.35rem);line-height:1.4;color:var(--text)}
+.rev .stars{color:var(--accent);font-size:1.1rem;letter-spacing:.15em}
+.rev cite{margin-top:auto;font-style:normal;font-weight:600;color:var(--ink);font-size:var(--step-small)}
+.g-rate{text-decoration:none;color:var(--muted)}
+.g-rate b{color:var(--accent)}
+.g-rate:hover{color:var(--ink)}
+.trat-more{margin:56px 0 0 35%;max-width:52ch;color:var(--text);font-size:var(--step-body)}
+@media (max-width:900px){.rev-grid{grid-template-columns:1fr}.trat-more{margin-left:0}.rev-actions .btn{width:100%}}
+
 /* Pontos do mapa pulsando */
 .dot::before{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid var(--accent-ink);animation:pulse 2.4s var(--ease) infinite}
 .dot:nth-of-type(2)::before{animation-delay:.4s}.dot:nth-of-type(3)::before{animation-delay:.8s}.dot:nth-of-type(4)::before{animation-delay:1.2s}.dot:nth-of-type(5)::before{animation-delay:1.6s}.dot:nth-of-type(6)::before{animation-delay:2s}
@@ -407,7 +427,7 @@ section{position:relative}
       </a>
       <a class="u" href="#mapa">O que te incomoda?</a>
     </div>
-    <div class="facts-line"><span><b>40 mil</b> acompanham no Instagram</span><span><b>5 anos</b> de Instituto Faciere</span><span><b>CREFITO</b> 319827-F</span></div>
+    <div class="facts-line"><a class="g-rate" href="https://www.google.com/search?q=Dra.+J%C3%A9ssica+Amaral+Est%C3%A9tica+Avan%C3%A7ada+Barueri#lrd=0x94cf03951768b701:0x5615cf9eaab515b2,1" data-track="ver_avaliacoes_google" target="_blank" rel="noopener"><b>5,0 ★</b> 366 avaliações no Google</a><span><b>40 mil</b> acompanham no Instagram</span><span><b>5 anos</b> de Instituto Faciere</span><span><b>CREFITO</b> 319827-F</span></div>
   </div>
   <figure class="hero-photo">
     <img id="heroImg" src="jessica-amaral-800.webp" srcset="jessica-amaral-800.webp 800w, jessica-amaral.webp 1600w" sizes="(max-width: 900px) 100vw, 46vw" width="1600" height="1749" alt="Dra. Jéssica Amaral sorrindo, de vestido vinho, comemorando os 5 anos do Instituto Faciere" fetchpriority="high">
@@ -468,7 +488,7 @@ section{position:relative}
       <figure class="unveil"><img src="cuidado-pele-800.webp" srcset="cuidado-pele-800.webp 500w, cuidado-pele.webp 1000w" sizes="340px" width="1000" height="825" loading="lazy" alt="Paciente deitada recebendo peeling no rosto"></figure>
     </li>
   </ol>
-  <p class="rise" style="margin:56px 0 0 35%;color:var(--muted);font-size:var(--step-small)"><span class="todo">[A DEFINIR: confirmar a lista de tratamentos com a Dra.]</span></p>
+  <p class="trat-more rise">Também na clínica: toxina botulínica, preenchimento de bigode chinês e marionete, lipo de papada, criolipólise, limpeza de pele, peeling herbal e depilação a laser.</p>
 </section>
 
 <!-- TECNOLOGIA -->
@@ -485,7 +505,7 @@ section{position:relative}
     <li class="rise"><h3>Análise facial por fotografia</h3><p>O rosto é fotografado e comparado lado a lado no tablet, antes e depois de cada etapa.</p></li>
     <li class="rise"><h3>Leitura de ângulos e proporções</h3><p>Terços do rosto, perfil e ângulos da mandíbula medidos para decidir onde, e se, aplicar.</p></li>
     <li class="rise"><h3>Bioestimulador de hidroxiapatita</h3><p>Radiesse para estimular colágeno, com efeito gradual e natural.</p></li>
-    <li class="rise todo-li"><h3>Equipamentos da clínica</h3><p><span class="todo">[A DEFINIR: nome dos aparelhos, ex.: ultrassom, laser, radiofrequência]</span></p></li>
+    <li class="rise"><h3>Laser e criolipólise</h3><p>Depilação a laser e criolipólise para gordura localizada, além dos protocolos de rosto. <span class="todo">[A DEFINIR: modelo dos aparelhos]</span></p></li>
   </ul>
   </div>
   <div class="tec-side">
@@ -536,6 +556,22 @@ section{position:relative}
     </figure>
   </div>
   <p class="res-note">Fotos autorizadas pelas pacientes. Cada organismo responde de um jeito; o resultado esperado para o seu caso é explicado na avaliação.</p>
+</section>
+
+<!-- AVALIAÇÕES NO GOOGLE -->
+<section class="reviews frame" id="avaliacoes">
+  <div class="rev-head">
+    <h2 class="h2 rise">5,0 no Google, com 366 avaliações</h2>
+    <div class="rev-actions rise">
+      <a class="btn btn-main" href="https://www.google.com/search?q=Dra.+J%C3%A9ssica+Amaral+Est%C3%A9tica+Avan%C3%A7ada+Barueri#lrd=0x94cf03951768b701:0x5615cf9eaab515b2,3" data-track="avaliar_google" target="_blank" rel="noopener">Já é paciente? Avalie a clínica</a>
+      <a class="u" href="https://www.google.com/search?q=Dra.+J%C3%A9ssica+Amaral+Est%C3%A9tica+Avan%C3%A7ada+Barueri#lrd=0x94cf03951768b701:0x5615cf9eaab515b2,1" data-track="ver_avaliacoes_google" target="_blank" rel="noopener">Ler todas no Google</a>
+    </div>
+  </div>
+  <div class="rev-grid">
+    <blockquote class="rev rise"><p class="stars" aria-label="5 estrelas">★★★★★</p><p>“Minha experiência na clínica é sempre excelente! Faço meu Botox anualmente e sou muito satisfeita com o atendimento e os resultados.”</p><cite>Inajara S. · Google</cite></blockquote>
+    <blockquote class="rev rise"><p class="stars" aria-label="5 estrelas">★★★★★</p><p>“Um carinho especial pela Dra. Jéssica, uma profissional excepcional. Admiro muito seu trabalho, sua dedicação, atenção e todo o cuidado.”</p><cite>Amanda V. · Google</cite></blockquote>
+    <blockquote class="rev rise"><p class="stars" aria-label="5 estrelas">★★★★★</p><p>“Amei tudo, desde o atendimento da recepção até o procedimento com a doutora!”</p><cite>Paciente · Google</cite></blockquote>
+  </div>
 </section>
 
 <!-- COMO FUNCIONA -->
@@ -603,7 +639,7 @@ section{position:relative}
     <details><summary>Quanto custa?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><p>Depende do plano de cada pessoa. Valores e formas de pagamento são apresentados na avaliação, já com o que faz sentido para o seu caso.</p></details>
     <details><summary>Dói? Preciso ficar de repouso?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><p>O conforto é prioridade. Na avaliação a Dra. explica cada etapa, o que você pode sentir e os cuidados depois do procedimento.</p></details>
     <details><summary>Quanto tempo dura o resultado?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><p>Varia conforme o procedimento, o produto e o seu organismo. Na avaliação você recebe a previsão para o seu caso e o calendário de retornos.</p></details>
-    <details><summary>Tem estacionamento?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><p><span class="todo">[A DEFINIR]</span> A clínica fica na Rua Campos Sales, 303, sala 23, no Centro de Barueri.</p></details>
+    <details><summary>Tem estacionamento?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><p><span class="todo">[A DEFINIR]</span> A clínica fica na Rua Campos Sales, 303, sala 23, Vila São João, Barueri (CEP 06401-000).</p></details>
   </div>
 </section>
 
@@ -624,7 +660,7 @@ section{position:relative}
 <!-- RODAPÉ -->
 <footer class="footer frame">
   <div class="foot-top">
-    <div><svg class="logo logo-foot" viewBox="0 0 1790 660" aria-hidden="true"><g fill="currentColor"><path d="M300 40 H418 V520 C418 610 360 656 282 656 C170 656 72 590 40 432 H132 C152 530 212 578 282 584 C300 585 318 572 326 556 C332 536 330 520 338 506 C352 490 376 478 382 462 C384 452 372 444 370 436 C378 428 388 420 384 410 C378 402 370 400 372 392 C380 386 392 380 390 372 C386 362 398 356 402 348 C404 338 392 330 386 318 C372 290 360 252 352 218 C346 190 338 166 330 150 C326 144 330 140 340 140 C360 140 392 146 406 150 C396 120 352 80 300 40 Z"/><path d="M232 42 C276 58 306 92 300 130 C292 168 244 196 206 236 C168 276 140 312 134 352 C128 400 160 446 214 480 C252 504 278 530 290 574 C268 548 238 528 200 508 C138 474 100 420 104 360 C108 306 150 258 196 214 C238 176 276 148 280 120 C284 92 262 64 232 42 Z"/></g><g fill="currentColor" font-family="Jost, sans-serif" font-weight="400" font-size="232" letter-spacing="22"><text x="520" y="296">INSTITUTO</text><text x="520" y="616">F</text><path d="M684 616 L766 446 L848 616" fill="none" stroke="currentColor" stroke-width="22"/><text x="900" y="616" letter-spacing="42">CIERE</text></g></svg><b class="sr-only">Instituto Faciere</b>Rua Campos Sales, 303, sala 23<br>Centro, Barueri (SP)</div>
+    <div><svg class="logo logo-foot" viewBox="0 0 1790 660" aria-hidden="true"><g fill="currentColor"><path d="M300 40 H418 V520 C418 610 360 656 282 656 C170 656 72 590 40 432 H132 C152 530 212 578 282 584 C300 585 318 572 326 556 C332 536 330 520 338 506 C352 490 376 478 382 462 C384 452 372 444 370 436 C378 428 388 420 384 410 C378 402 370 400 372 392 C380 386 392 380 390 372 C386 362 398 356 402 348 C404 338 392 330 386 318 C372 290 360 252 352 218 C346 190 338 166 330 150 C326 144 330 140 340 140 C360 140 392 146 406 150 C396 120 352 80 300 40 Z"/><path d="M232 42 C276 58 306 92 300 130 C292 168 244 196 206 236 C168 276 140 312 134 352 C128 400 160 446 214 480 C252 504 278 530 290 574 C268 548 238 528 200 508 C138 474 100 420 104 360 C108 306 150 258 196 214 C238 176 276 148 280 120 C284 92 262 64 232 42 Z"/></g><g fill="currentColor" font-family="Jost, sans-serif" font-weight="400" font-size="232" letter-spacing="22"><text x="520" y="296">INSTITUTO</text><text x="520" y="616">F</text><path d="M684 616 L766 446 L848 616" fill="none" stroke="currentColor" stroke-width="22"/><text x="900" y="616" letter-spacing="42">CIERE</text></g></svg><b class="sr-only">Instituto Faciere</b>Rua Campos Sales, 303, sala 23<br>Vila São João, Barueri (SP)</div>
     <div><b>Atendimento</b><span class="todo">[A DEFINIR: dias e horários]</span><br>Telefone <a href="tel:+551145524825" data-track="ligar">(11) 4552-4825</a></div>
     <div><b>Dra. Jéssica Amaral</b>Fisioterapeuta · CREFITO 319827-F</div>
     <a href="#inicio">Voltar ao topo</a>
@@ -663,7 +699,7 @@ var CONFIG = {
   gadsLabel: '',      // rótulo da conversão "Clique no WhatsApp"
   metaPixel: '',      // ex.: '123456789012345'
   clarity: '',        // ex.: 'abcd1234' (Microsoft Clarity)
-  reviewUrl: ''       // link "Pedir avaliações" do Perfil da Empresa no Google
+  reviewUrl: 'https://www.google.com/search?q=Dra.+J%C3%A9ssica+Amaral+Est%C3%A9tica+Avan%C3%A7ada+Barueri#lrd=0x94cf03951768b701:0x5615cf9eaab515b2,3'  // abre direto a janela de avaliar no Google
 };
 
 /* ---------- Origem do visitante (de onde o lead veio) ---------- */
